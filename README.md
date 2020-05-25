@@ -2,7 +2,11 @@
 CAMEL+SPRING BOOT+APACHE KAFKA+MONGO DB
 
 # Overview
-This is simple microservice which will get Post request as json from Rest endpoint.This request will be saved in to Kafka messaging topic. From topic the request will saved in to Mongo DB.
+# Shoppingcart -Producer
+This microservice which will get Post request as json from Rest endpoint.This request will be saved in to Kafka messaging topic called ProductTopic. 
+
+# Shoppingcart-Consumer
+This Microservice will listen  from ProductTopic  and the payload request will saved in to Mongo DB.
 
 CAMEL: Camel is open source integration framework that empowers you to quickly and easily integrate various systems consuming or producing data. Using consuming less and smart code is acheived.
 APACHE KAFKA: Apache Kafka is a distributed streaming platform that lets you publish and subscribe to streams of records
@@ -50,7 +54,6 @@ Or
 
 # # TODO:
 Authetication mechanism of http endpoints, Mongo Database
-Decouple the consumer Topic consumption to Database to separate microservice
 Expose GetProduct Rest services.
 Refactoring, removing the hardcodings, POM cleanups
 
